@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand/v2"
 	"time"
 
 	"github.com/HexaWX/HexaWX/core"
@@ -21,8 +22,8 @@ func (d *DummyDriver) Init(config map[string]string) error {
 func (d *DummyDriver) Fetch() (core.WeatherRecord, error) {
 	return core.WeatherRecord{
 		Timestamp:   time.Now(),
-		Temperature: 22.5,
-		Humidity:    50.0,
+		Temperature: 20.0 + rand.Float64()*10,
+		Humidity:    40.0 + rand.Float64()*20,
 	}, nil
 }
 
