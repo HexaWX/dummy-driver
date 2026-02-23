@@ -5,8 +5,8 @@ import (
 	"math/rand/v2"
 	"time"
 
-	"github.com/HexaWX/HexaWX/core"
 	"github.com/hashicorp/go-plugin"
+	"github.com/hexawx/hexawx/core"
 )
 
 // Notre implémentation concrète du Driver
@@ -30,15 +30,8 @@ func (d *DummyDriver) Fetch() (core.WeatherRecord, error) {
 func main() {
 	driver := &DummyDriver{}
 
-	// La configuration doit correspondre à celle définie dans le package core
-	var handshakeConfig = plugin.HandshakeConfig{
-		ProtocolVersion:  1,
-		MagicCookieKey:   "GOWX_PLUGIN",
-		MagicCookieValue: "hello",
-	}
-
 	plugin.Serve(&plugin.ServeConfig{
-		HandshakeConfig: handshakeConfig,
+		HandshakeConfig: core.Handshake,
 		Plugins: map[string]plugin.Plugin{
 			"driver": &core.DriverPlugin{Impl: driver},
 		},
