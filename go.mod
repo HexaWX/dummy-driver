@@ -4,19 +4,23 @@ go 1.25.6
 
 require (
 	github.com/hashicorp/go-plugin v1.7.0
-	github.com/hexawx/hexawx v0.0.0-20260223001150-cd40c62d427c
+	github.com/hexawx/hexawx v0.0.0-20260223011818-871c53860672
 )
 
 require (
+	github.com/anmitsu/go-shlex v0.0.0-20200514113438-38f4b401e2be // indirect
 	github.com/fatih/color v1.13.0 // indirect
+	github.com/gliderlabs/ssh v0.3.8 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/hashicorp/go-hclog v1.6.3 // indirect
 	github.com/hashicorp/yamux v0.1.2 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.17 // indirect
 	github.com/oklog/run v1.1.0 // indirect
+	golang.org/x/crypto v0.36.0 // indirect
 	golang.org/x/net v0.38.0 // indirect
 	golang.org/x/sys v0.31.0 // indirect
+	golang.org/x/term v0.30.0 // indirect
 	golang.org/x/text v0.28.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20231106174013-bbf56f31fb17 // indirect
 	google.golang.org/grpc v1.61.0 // indirect

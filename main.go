@@ -19,6 +19,10 @@ func (d *DummyDriver) Init(config map[string]string) error {
 	return nil
 }
 
+func (p *DummyDriver) Name() (string, error) {
+	return "DummyDriver", nil
+}
+
 func (d *DummyDriver) Fetch() (core.WeatherRecord, error) {
 	return core.WeatherRecord{
 		Timestamp:   time.Now(),
